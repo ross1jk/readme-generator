@@ -18,6 +18,11 @@ inquirer
      type: "input",
      name: "name",
      message: "What is the title of your project?"
+    }, 
+    {
+        type: "input",
+        name: "description", 
+        message: "Briefly describe your project."
     }
 ]).then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
@@ -27,7 +32,8 @@ inquirer
 ## Table of Contents
 
 ## Description
-    
+`+`${data.description}`+
+`
 ## Instalation 
     
 ## Usage
