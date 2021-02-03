@@ -28,7 +28,13 @@ inquirer
         type: "input", 
         name: "installation", 
         message: "Provide step-by-step installation procedures that will help the user get the development environment running."
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "What are the instructions for use?"
     }
+
 ]).then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
     const readme =  `
@@ -43,7 +49,9 @@ inquirer
 `+`${data.installation}`+
 `    
 ## Usage
-    
+    figure out how to add an image 
+`+`${data.usage}`+
+`  
 ## Contributing
     
 ## Tests
