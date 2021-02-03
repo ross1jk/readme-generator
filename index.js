@@ -15,14 +15,19 @@ const fs = require('fs');
 inquirer
   .prompt([
     {
-     type: "input",
-     name: "name",
-     message: "What is the title of your project?"
+        type: "input",
+        name: "name",
+        message: "What is the title of your project?"
     }, 
     {
         type: "input",
         name: "description", 
-        message: "Briefly describe your project."
+        message: "Briefly describe your project (Think about the what, why, and how for this projects development)."
+    },
+    {
+        type: "input", 
+        name: "installation", 
+        message: "Provide step-by-step installation procedures that will help the user get the development environment running."
     }
 ]).then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
@@ -34,8 +39,9 @@ inquirer
 ## Description
 `+`${data.description}`+
 `
-## Instalation 
-    
+## Installation 
+`+`${data.installation}`+
+`    
 ## Usage
     
 ## Contributing
