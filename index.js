@@ -21,5 +21,26 @@ inquirer
     }
 ]).then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
-    fs.writeFile(filename, "working", (err) =>
+    const readme =  `
+# ` + `${data.name}` + `
+
+## Table of Contents
+
+## Description
+    
+## Instalation 
+    
+## Usage
+    
+## Contributing
+    
+## Tests
+   
+## Questions
+
+**GitHub Profile**
+
+**Email**`
+
+    fs.writeFile(filename, readme , (err) =>
     err ? console.log(err) : console.log('Success!'))})
