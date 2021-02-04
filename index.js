@@ -33,8 +33,18 @@ inquirer
         type: "input",
         name: "usage",
         message: "What are the instructions for use?"
+    }, 
+    //contributing, test, questions
+    {
+        type: "input", 
+        name: "github",
+        message: "Proide your Github Username"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Provide your email address"
     }
-
 ]).then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
     const readme =  `
@@ -50,17 +60,18 @@ inquirer
 `    
 ## Usage
     figure out how to add an image 
-`+`${data.usage}`+
-`  
+`+`${data.usage}`+`
 ## Contributing
     
 ## Tests
-   
+
 ## Questions
 
 **GitHub Profile**
+`+`${data.github}`+`
 
-**Email**`
+**Email**
+`+`${data.email}`
 
-    fs.writeFile(filename, readme , (err) =>
-    err ? console.log(err) : console.log('Success!'))})
+fs.writeFile(filename, readme , (err) =>
+err ? console.log(err) : console.log('Success!'))})
