@@ -76,13 +76,12 @@ const questions = [
 inquirer
   .prompt(questions).then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
-    const readme =  `
-# ` + `${data.name}` + `
+    const readme =  `# ${data.name}
 
-![badge](https://img.shields.io/static/v1?label=License&message=`+`${data.license}`+`&color=blue)
+![badge](https://img.shields.io/static/v1?label=License&message=${data.license}&color=blue)
 
 ## Description
-`+`${data.description}`+`
+${data.description}
 
 ## Table of Contents
 * [Installation](#Installation)
@@ -92,21 +91,24 @@ inquirer
 * [Questions](#Questions)
 
 ## Installation 
-`+`${data.installation}`+
-`    
+${data.installation}
+ 
 ## Usage
-figure out how to add an image 
-`+`${data.usage}`+`
+${data.usage}
 
 ## Contributing
-`+`${data.contributing}`+`   
+${data.contributing}
 
 ## Tests
-`+`${data.tests}`+`  
+${data.tests}
 
 ## Questions
 
-Please reach out to me with any addtional questions by contacting me on my **GitHub Profile** `+`${data.github}`+` or through **My Email Address** `+`${data.email}`
+Please reach out to me with any addtional questions by contacting me.
+* GitHub Profile: ${data.github}  
+* My Email Address: ${data.email}
+  
+`
 
 fs.writeFile(filename, readme , (err) =>
 err ? console.log(err) : console.log('Success!'))})
