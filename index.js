@@ -34,7 +34,22 @@ inquirer
         name: "usage",
         message: "What are the instructions for use?"
     }, 
-    //contributing, test, questions
+    //contributing, test
+    {
+        type: "checkbox",
+        name: "license",
+        message: "What License does your application have?",
+        choices: [
+            "GNU_AGPLv3",
+            "GNU_GPLv3",
+            "GNU_LGPLv3",
+            "Mozilla_Public_License_2.0", 
+            "Apache_License_2.0",
+            "MIT_License",
+            "Boost_Software_License_1.0",
+            "The_Unlicense"
+        ]
+    },
     {
         type: "input", 
         name: "github",
@@ -49,6 +64,8 @@ inquirer
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
     const readme =  `
 # ` + `${data.name}` + `
+
+![badge](https://img.shields.io/static/v1?label=License&message=`+`${data.license}`+`&color=blue)
 
 ## Description
 `+`${data.description}`+`
