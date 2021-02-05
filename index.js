@@ -43,7 +43,12 @@ inquirer
             "Yes, this project is open for contriuting and we have a unique set of contributing standards",
             "No, this project is not open to contributions from others"
         ]
-    }, //test
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "If there are tests for your application provide instructions on how to run them, if not input 'Not Applicable'"
+    },
     {
         type: "checkbox",
         name: "license",
@@ -97,6 +102,7 @@ figure out how to add an image
 `+`${data.contributing}`+`   
 
 ## Tests
+`+`${data.tests}`+`  
 
 ## Questions
 
