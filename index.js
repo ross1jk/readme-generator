@@ -2,18 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs'); 
 // TODO: Create an array of questions for user input
-//const questions = [];
-
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-//function init() {}
-
-// Function call to initialize app
-//init();
-inquirer
-  .prompt([
+const questions = [
     {
         type: "input",
         name: "name",
@@ -74,7 +63,18 @@ inquirer
         name: "email",
         message: "Provide your email address"
     }
-]).then((data) => {
+];
+
+// TODO: Create a function to write README file
+//function writeToFile(fileName, data) {}
+
+// TODO: Create a function to initialize app
+//function init() {}
+
+// Function call to initialize app
+//init();
+inquirer
+  .prompt(questions).then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
     const readme =  `
 # ` + `${data.name}` + `
