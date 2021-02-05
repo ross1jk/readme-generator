@@ -1,7 +1,8 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs'); 
-// TODO: Create an array of questions for user input
+const generateMarkdown = require('./utils/generateMarkdown'); 
+// Questions for User Input - given when users runs node index.js
 const questions = [
     {
         type: "input",
@@ -65,50 +66,15 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+// Function to use prompts to write my README
+    inquirer.prompt(questions).then((data) => {
+    const fileName = `${data.name.toLowerCase().split(' ').join('')}.md`;
+    fs.writeFile(fileName, generateMarkdown(data) , (err) =>
+    err ? console.log(err) : console.log('Your README has been Generated Successfully!'))
+    });
 
 // TODO: Create a function to initialize app
 //function init() {}
 
 // Function call to initialize app
 //init();
-inquirer
-  .prompt(questions).then((data) => {
-    const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
-    const readme =  `# ${data.name}
-
-![badge](https://img.shields.io/static/v1?label=License&message=${data.license}&color=blue)
-
-## Description
-${data.description}
-
-## Table of Contents
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Contributing](#Contributing)
-* [Tests](#Tests)
-* [Questions](#Questions)
-
-## Installation 
-${data.installation}
- 
-## Usage
-${data.usage}
-
-## Contributing
-${data.contributing}
-
-## Tests
-${data.tests}
-
-## Questions
-
-Please reach out to me with any addtional questions by contacting me.
-* GitHub Profile: ${data.github}  
-* My Email Address: ${data.email}
-  
-`
-
-fs.writeFile(filename, readme , (err) =>
-err ? console.log(err) : console.log('Success!'))})
