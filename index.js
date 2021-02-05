@@ -50,28 +50,30 @@ inquirer
     const readme =  `
 # ` + `${data.name}` + `
 
-## Table of Contents
-
 ## Description
-`+`${data.description}`+
-`
+`+`${data.description}`+`
+
+## Table of Contents
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
+
 ## Installation 
 `+`${data.installation}`+
 `    
 ## Usage
-    figure out how to add an image 
+figure out how to add an image 
 `+`${data.usage}`+`
+
 ## Contributing
     
 ## Tests
 
 ## Questions
 
-**GitHub Profile**
-`+`${data.github}`+`
-
-**Email**
-`+`${data.email}`
+Please reach out to me with any addtional questions by contacting me on my **GitHub Profile** `+`${data.github}`+` or through **My Email Address** `+`${data.email}`
 
 fs.writeFile(filename, readme , (err) =>
 err ? console.log(err) : console.log('Success!'))})
