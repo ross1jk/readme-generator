@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+//Function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (license === "GNU_AGPLv3") {
     return "![badge](https://img.shields.io/static/v1?label=License&message=GNU%20AGPLv3&color=blue)"
@@ -29,9 +29,7 @@ function renderLicenseBadge(license) {
   }
 }; 
 
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//Function that returns license link within README
 function renderLicenseLink(license) { 
   if (license === "None"){
     return ""
@@ -39,11 +37,9 @@ function renderLicenseLink(license) {
     return`
 * [License](#License)`
   }
-
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//Function that returns the license section of the README
 function renderLicenseSection(license) {  
   if (license === "None"){
     return ""
@@ -57,7 +53,7 @@ This application has a ` + license + ` License type. Please read more about perm
   }
 } 
 
-// TODO: Create a function to generate markdown for README
+//Function that generates markdown for README
 function generateMarkdown(data) {
   return `# ${data.name}
   
