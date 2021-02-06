@@ -42,7 +42,10 @@ function renderLicenseSection(license) {
   if (license === "None"){
     return ""
   } else {
-    return "This application has a " + license + "License type. Please read more about permissions at [Choose A License](https://choosealicense.com/licenses/)"
+    return `
+## License 
+
+This application has a ` + license + ` License type. Please read more about permissions at [Choose A License](https://choosealicense.com/licenses/)`
   }
 } 
 
@@ -70,7 +73,6 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-## License
 ${renderLicenseSection(data.license)}
 
 ## Contributing
