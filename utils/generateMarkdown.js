@@ -1,28 +1,28 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (license === "GNU_AGPLv3") {
-    return "https://img.shields.io/static/v1?label=License&message=GNU%20AGPLv3&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=GNU%20AGPLv3&color=blue)"
   } 
   if (license === "GNU_GPLv3") {
-    return "https://img.shields.io/static/v1?label=License&message=GNU%20GPLv3&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=GNU%20GPLv3&color=blue)"
   }
   if (license === "GNU_LGPLv3") {
-    return "https://img.shields.io/static/v1?label=License&message=GNU%20LGPLv3&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=GNU%20LGPLv3&color=blue)"
   }
   if (license === "Mozilla_Public_License_2.0") {
-    return "https://img.shields.io/static/v1?label=License&message=Mozilla%20Public%20License%202.0&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=Mozilla%20Public%20License%202.0&color=blue)"
   }
   if (license === "Apache_License_2.0") {
-    return "https://img.shields.io/static/v1?label=License&message=Apache%20License%202.0&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=Apache%20License%202.0&color=blue)"
   }
   if (license === "MIT_License") {
-    return "https://img.shields.io/static/v1?label=License&message=MIT%20License&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=MIT%20License&color=blue)"
   }
   if (license === "Boost_Software_License_1.0") {
-    return "https://img.shields.io/static/v1?label=License&message=Boost%20Software%20License%201.0&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=Boost%20Software%20License%201.0&color=blue)"
   }
   if (license === "The_Unlicense") {
-    return "https://img.shields.io/static/v1?label=License&message=The%20Unlicense&color=blue"
+    return "![badge](https://img.shields.io/static/v1?label=License&message=The%20Unlicense&color=blue)"
   }
   if (license === "None"){
     return ""
@@ -61,7 +61,7 @@ This application has a ` + license + ` License type. Please read more about perm
 function generateMarkdown(data) {
   return `# ${data.name}
   
-![badge](${renderLicenseBadge(data.license)})
+${renderLicenseBadge(data.license)}
   
 ## Description
 ${data.description}
