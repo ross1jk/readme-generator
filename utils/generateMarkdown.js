@@ -1,5 +1,4 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "GNU_AGPLv3") {
     return "https://img.shields.io/static/v1?label=License&message=GNU%20AGPLv3&color=blue"
@@ -33,11 +32,21 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+// function renderLicenseLink(license) { 
+
+// };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {  
+  if (license === "None"){
+    return ""
+  } else {
+    return "This application has a " + license + "License type. Please read more about permissions at [Choose A License](https://choosealicense.com/licenses/)"
+  }
+} 
+
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -50,8 +59,7 @@ ${data.description}
   
 ## Table of Contents
 * [Installation](#Installation)
-* [Usage](#Usage)
-* [License](#License)
+* [Usage](#Usage) 
 * [Contributing](#Contributing)
 * [Tests](#Tests)
 * [Questions](#Questions)
@@ -63,7 +71,8 @@ ${data.installation}
 ${data.usage}
 
 ## License
-  
+${renderLicenseSection(data.license)}
+
 ## Contributing
 ${data.contributing}  
   
@@ -80,4 +89,3 @@ Please reach out to me with any addtional questions by contacting me.
 }
 
 module.exports = generateMarkdown;
-  // badge = `![badge](https://img.shields.io/static/v1?label=License&message=${data.license}&color=blue)"`
