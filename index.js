@@ -40,7 +40,7 @@ const questions = [
         message: "If there are tests for your application provide instructions on how to run them, if not input 'Not Applicable'"
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "What License does your application have?",
         choices: [
@@ -68,9 +68,9 @@ const questions = [
 
 // Function to use prompts to write my README
     inquirer.prompt(questions).then((data) => {
-    const fileName = `${data.name.toLowerCase().split(' ').join('')}.md`;
-    fs.writeFile(fileName, generateMarkdown(data) , (err) =>
-    err ? console.log(err) : console.log('Your README has been Generated Successfully!'))
+        const fileName = `${data.name.toLowerCase().split(' ').join('')}.md`;
+        fs.writeFile(fileName, generateMarkdown(data) , (err) =>
+        err ? console.log(err) : console.log('Your README has been Generated Successfully!'))
     });
 
 // TODO: Create a function to initialize app
