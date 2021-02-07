@@ -29,8 +29,8 @@ const questions = [
         name: "contributing",
         message: "Is this project open for contributing?",
         choices: [
-            "Yes, this project is open for contributing and we follow [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) Standards",
-            "Yes, this project is open for contriuting and we have a unique set of contributing standards",
+            "This project is open for contributing and we follow [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) Standards",
+            "This project is open for contriuting and we have a unique set of contributing standards",
             "No, this project is not open to contributions from others"
         ]
     },

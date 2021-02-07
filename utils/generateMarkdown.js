@@ -46,7 +46,6 @@ function renderLicenseSection(license) {
   } else {
     return `
 ## License 
-
 This application has a ` + license + ` License type. Please read more about permissions at [Choose A License](https://choosealicense.com/licenses/)
 
 `
@@ -82,11 +81,9 @@ ${data.contributing}
 ${data.tests} 
   
 ## Questions
-  
 Please reach out to me with any addtional questions by contacting me.
-* GitHub Profile: ${data.github}  
+* GitHub Profile: https://github.com/${data.github}
 * My Email Address: ${data.email}
-  
 `
 }
 
