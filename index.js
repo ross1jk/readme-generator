@@ -66,16 +66,19 @@ const questions = [
         message: "Provide your email address"
     }
 ];
-
-// Function to use prompts to write my README
-    inquirer.prompt(questions).then((data) => {
-        const fileName = `${data.name.toLowerCase().split(' ').join('')}.md`;
-        fs.writeFile(fileName, generateMarkdown(data) , (err) =>
-        err ? console.log(err) : console.log('Your README has been Generated Successfully!'))
-    });
+// TODO: Create a function to write README file
+function writeToFile(data) {
+    const fileName = `${data.name.toLowerCase().split(' ').join('')}.md`;
+    fs.writeFile(fileName, generateMarkdown(data) , (err) =>
+    err ? console.log(err) : console.log('Your README has been generated successfully!'))
+}
 
 // TODO: Create a function to initialize app
-//function init() {}
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        writeToFile(data);
+    })
+}
 
 // Function call to initialize app
-//init();
+init();
