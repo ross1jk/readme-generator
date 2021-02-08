@@ -30,7 +30,8 @@ Watch the following video for step by step instructions on how to use this appli
 Once Installed, you will run the command node index.js in your terminal. From there you will be asked a series of prompts. Be as detailed as possible when answering. When completed, your Terminal will say ‘your README has generated successfully!’. You will then see your README markdown file will be added to your projects current files. Remember to save, commit, and push your file to your GitHub repository.
 
 Readme Mock-Up Functionality:
-![Readme Mock-Up Functionality]("./images/readme_generator_mockup.png")
+
+![Readme Mock-Up Functionality](./images/readme_generator_mockup.png)
 
 ## License
 
