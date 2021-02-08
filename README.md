@@ -27,11 +27,13 @@ Once this is application is cloned down to your Visual Studio, you will first ne
 
 Watch the following video for step by step instructions on how to use this application: [Utilizing the README Generator(https://drive.google.com/file/d/1z4gkgv9rKMIO66NJb5FfiYh5-YNlgVTo/view)
 
-Once Installed, you will run the command node index.js in your terminal. From there you will be asked a series of prompts. Be as detailed as possible when answering. When completed, your Terminal will say ‘your README has generated successfully!’. You will then see your README markdown file will be added to your projects current files. Remember to save, commit, and push your file to your GitHub repository.
+Once Installed, you will run the command node index.js in your terminal. From there you will be asked a series of prompts. Be as detailed as possible when answering. When completed, your Terminal will say ‘your README has generated successfully!’. You will then see your README markdown file will be added to your projects current files. Be sure to review your file, remember to save, commit, and push your file to your GitHub repository.
 
 Readme Mock-Up Functionality:
 
 ![Readme Mock-Up Functionality](./images/readme_generator_mockup.png)
+
+See Samples in the repository folder: application samples
 
 ## License
 

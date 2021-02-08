@@ -46,6 +46,7 @@ function renderLicenseSection(license) {
   } else {
     return `
 ## License 
+
 This application has a ` + license + ` License type. Please read more about permissions at [Choose A License](https://choosealicense.com/licenses/)
 
 `
@@ -59,9 +60,11 @@ function generateMarkdown(data) {
 ${renderLicenseBadge(data.license)}
   
 ## Description
+
 ${data.description}
   
 ## Table of Contents
+
 * [Installation](#Installation)
 * [Usage](#Usage) ${renderLicenseLink(data.license)}
 * [Contributing](#Contributing)
@@ -69,19 +72,25 @@ ${data.description}
 * [Questions](#Questions)
   
 ## Installation 
+
 ${data.installation}
    
 ## Usage
+
 ${data.usage}
 ${renderLicenseSection(data.license)}
 ## Contributing
+
 ${data.contributing}  
   
 ## Tests
+
 ${data.tests} 
   
 ## Questions
+
 Please reach out to me with any additional questions by contacting me.
+
 * GitHub Profile: https://github.com/${data.github}
 * My Email Address: ${data.email}
 `
