@@ -81,7 +81,7 @@ ${data.contributing}
 ${data.tests} 
   
 ## Questions
-Please reach out to me with any addtional questions by contacting me.
+Please reach out to me with any additional questions by contacting me.
 * GitHub Profile: https://github.com/${data.github}
 * My Email Address: ${data.email}
 `
